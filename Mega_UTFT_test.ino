@@ -12,15 +12,26 @@ extern uint8_t SmallFont[];
 
 void setup() {
   // Setup the LCD
-  myGLCD.InitLCD(); 
-  myGLCD.setFont(SmallFont);
-
+   initialize();
+  
 }
 
 void loop() {
   
-  myGLCD.clrScr();
+  
 
+  
+
+  //delay(5000);
+}
+
+void initialize() {
+  
+  
+  myGLCD.InitLCD(); 
+  myGLCD.setFont(SmallFont);
+  
+  myGLCD.clrScr();
   myGLCD.setColor(255, 0, 0);
   myGLCD.fillRect(0, 0, 319, 14);
   myGLCD.setColor(64, 64, 64);
@@ -34,6 +45,6 @@ void loop() {
 
   myGLCD.setColor(0, 0, 255);
   myGLCD.drawRect(0, 14, 319,225);
-
-  delay(5000);
+ 
+ return;
 }
